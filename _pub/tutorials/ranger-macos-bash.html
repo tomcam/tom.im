@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="description" content="Installing the Ranger file manager on MacOS under Bash">
+<link rel="stylesheet" href="themes/tom.im/reset.css">
+<link rel="stylesheet" href="themes/tom.im/fonts.css">
+<link rel="stylesheet" href="themes/tom.im/layout.css">
+<link rel="stylesheet" href="themes/tom.im/skin.css">
+<link rel="stylesheet" href="themes/tom.im/tom.im.css">
+
+</head>
+<body>
+
+<header><ul>
+<li><a href="/">tom.im</a></li>
+</ul>
+</header>
+
+<nav><p><a href="/">Blog</a> <a href="/">Articles</a> <a href="/">Featured</a> <a href="/">RSS</a></p>
+</nav>
+
+<article><h1>Installing the Ranger file manager on MacOS under Bash</h1>
+<p>An insanely fast file manager/viewer with Vim key bindings? Sign me up for <a href="https://github.com/ranger/ranger">Ranger</a>!
+Problem is, I'm not used to installing these character-mode thingies from source on MacOS.  Here are my notes on how
+to get that job done.</p>
+<h2>Executive summary</h2>
+<ul>
+<li>Use Python to install the Pip package manager. Obvi</li>
+</ul>
+<p>I assume you have a recent version of MacOS, which has an acceptable version of Python
+on it.</p>
+<h2>Installing Pip</h2>
+<p>Yes, I know, this is elementary stuff. Hey, I didn't have these steps memorized. I'm a Go programmer, not
+a Python guru!</p>
+<p><a href="https://pip.pypa.io/en/stable/installing/">Pip</a> is the Python package manager. To install it,
+drop to the Terminal and run this command:</p>
+<pre style="color:#e5e5e5;background-color:#000">curl https://bootstrap.pypa.io/get-pip.py -o ~/Downloads/get-pip.py
+</pre><p>Curl is technically a web browser. The command above gets a copy of the Python source for Pip
+and copies it into your MacOS Downloads directory.</p>
+<h2>Change to the Downloads directory</h2>
+<p>Change to the Downloads directory:</p>
+<pre style="color:#e5e5e5;background-color:#000"><span style="color:#fff;font-weight:bold">cd</span> ~/Downloads
+</pre><h2>Install Pip using Python</h2>
+<p>You need to run Python on the <code>get-pip.py</code> program to install Pip:</p>
+<pre style="color:#e5e5e5;background-color:#000">python ~/Downloads/get-pip.py --user
+</pre><h2>Add Python and Pip to the path</h2>
+<p>Let's get this on the path so you can just type <code>ranger</code> to start Ranger when the time comes.
+We'll do this by making sure you can run Python scripts like an executable, without
+having to precede the name with <code>python</code>. That means appending the Pythong directory
+to your <code>PATH</code> environment variable.</p>
+<h3>Edit .bashrc</h3>
+<ul>
+<li>Fire up your favorite editor and load <code>~/.bashrc</code>. Here's an example using Vim:</li>
+</ul>
+<pre style="color:#e5e5e5;background-color:#000">vim ~/.bashrc
+</pre><ul>
+<li>Add this to the bottom of the file:</li>
+</ul>
+<pre style="color:#e5e5e5;background-color:#000"><span style="color:#fff;font-weight:bold">export</span> PATH=<span style="color:#0ff;font-weight:bold">&#34;</span>$PATH<span style="color:#0ff;font-weight:bold">:~/Library/Python/2.7/bin</span><span style="color:#0ff;font-weight:bold">&#34;</span>
+</pre><h3>Run source to export those changes into your current environment</h3>
+<p>Normally the change you just made wouldn't be available unless you
+exited Terminal and opened up a new instance.</p>
+<ul>
+<li>Save some time by running <code>source</code> on the Bash profile you just created:</li>
+</ul>
+<pre style="color:#e5e5e5;background-color:#000"><span style="color:#fff;font-weight:bold">source</span> ~/.bashrc
+</pre><p>Now Pip will be available from the command line.</p>
+<h2>Install Ranger</h2>
+<p>Finally, we can install Ranger itself:</p>
+<pre style="color:#e5e5e5;background-color:#000">pip install ranger-fm --user
+</pre><p>And now you can run it from the command line anywhere on your system:</p>
+<pre style="color:#e5e5e5;background-color:#000">ranger
+</pre></article>
+
+<footer><table>
+<thead>
+<tr>
+<th>SECTIONS</th>
+<th>CONNECTIONS</th>
+<th>About Us</th>
+<th align="left">Your rights</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/">Sitemap</a></td>
+<td><a href="/">Twitter</a></td>
+<td><a href="/">About</a></td>
+<td align="left"><a href="/">Privacy and cookies</a></td>
+</tr>
+<tr>
+<td><a href="/">Articles</a></td>
+<td><a href="/">Instagram</a></td>
+<td><a href="/">Credits</a></td>
+<td align="left"><a href="/">Terms of use </a></td>
+</tr>
+<tr>
+<td><a href="/">Tutorials</a></td>
+<td><a href="/">LinkedIn</a></td>
+<td><a href="/">Media</a></td>
+<td align="left"><a href="/">About our ads</a></td>
+</tr>
+<tr>
+<td><a href="/">Blog</a></td>
+<td><a href="/">YouTube</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td><a href="/">Opinion</a></td>
+<td><a href="/">Instagram</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td><a href="/">Sitemap</a></td>
+<td><a href="/">Twitter</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="/">LinkedIn</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="/">Podcast</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="/">RSS</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</footer>
+
+</body>
+</html>
