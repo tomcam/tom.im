@@ -42,27 +42,51 @@ You need to run Python on the `get-pip.py` program to install Pip:
 python ~/Downloads/get-pip.py --user
 ```
 
-## Put Pip on the path
+## Add Python and Pip to the path
 
 Let's get this on the path so you can just type `ranger` to start Ranger when the time comes.
 We'll do this by making sure you can run Python scripts like an executable, without 
-having to precede the name with `python`:
+having to precede the name with `python`. That means appending the Pythong directory
+to your `PATH` environment variable.
 
 ### Edit .bashrc
 
+* Fire up your favorite editor and load `~/.bashrc`. Here's an example using Vim:
+
 ```bash
-~/.bashrc
+vim ~/.bashrc
+```
 
-Fire up your favorite editor
+* Add this to the bottom of the file:
 
-vim ~/.bashrcsource ~/.bashrc
-
+```bash
 export PATH="$PATH:~/Library/Python/2.7/bin"
+```
+
+### Run source to export those changes into your current environment
+
+Normally the change you just made wouldn't be available unless you 
+exited Terminal and opened up a new instance.
+
+* Save some time by running `source` on the Bash profile you just created:
+
+```bash
+source ~/.bashrc
+```
+
 Now Pip will be available from the command line.
 
+## Install Ranger
 
+Finally, we can install Ranger itself:
+
+```bash
 pip install ranger-fm --user
+```
 
-Then just run it:
+And now you can run it from the command line anywhere on your system:
 
-$ ranger
+```bash
+ranger
+```
+
