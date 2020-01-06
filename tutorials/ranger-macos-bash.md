@@ -62,12 +62,16 @@ We'll do this by making sure you can run Python scripts like an executable, with
 having to precede the name with `python`. That means appending the Pythong directory
 to your `PATH` environment variable.
 
-### Edit .bashrc
 
-* Fire up your favorite editor and load `~/.bashrc`. Here's an example using Vim:
+On MacOS you do this on `~/.bash_profile` instead of `~/.bashrc`, so this
+differs from the Ranger docs.
+
+### Edit ~/.bash_profile
+
+* Fire up your favorite editor and load `~/.bash_profile`. Here's an example using Vim:
 
 ```bash
-vim ~/.bashrc
+vim ~/.bash_profile 
 ```
 
 * Add this to the bottom of the file:
