@@ -1,3 +1,6 @@
+===
+pagetype="bloghome"
+===
 # hello, world.
 
 Few things make me happier than everyone's first program: printing `hello, world.` There was no other way to start this blog.

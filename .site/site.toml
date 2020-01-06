@@ -7,4 +7,10 @@ AssetDir = ""
 BaseDir = ""
 Publish = "_pub"
 ThemeDir = "/Users/tom/Library/Preferences/.d2/themes"
-Ganalytics = ""
+Ganalytics = "UA-152078779-2"
+
+[company]
+CompanyName = "tom.im"
+
+[author]
+FullName = "Tom Campbell"

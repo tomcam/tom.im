@@ -5,6 +5,28 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <meta name="description" content="Installing the Ranger file manager on MacOS under Bash">
+
+<script>
+  (function(a,b,c){var d=a.history,e=document,f=navigator||{},g=localStorage,
+  h=encodeURIComponent,i=d.pushState,k=function(){return Math.random().toString(36)},
+  l=function(){return g.cid||(g.cid=k()),g.cid},m=function(r){var s=[];for(var t in r)
+  r.hasOwnProperty(t)&&void 0!==r[t]&&s.push(h(t)+"="+h(r[t]));return s.join("&")},
+  n=function(r,s,t,u,v,w,x){var z="https://www.google-analytics.com/collect",
+  A=m({v:"1",ds:"web",aip:c.anonymizeIp?1:void 0,tid:b,cid:l(),t:r||"pageview",
+  sd:c.colorDepth&&screen.colorDepth?screen.colorDepth+"-bits":void 0,dr:e.referrer||
+  void 0,dt:e.title,dl:e.location.origin+e.location.pathname+e.location.search,ul:c.language?
+  (f.language||"").toLowerCase():void 0,de:c.characterSet?e.characterSet:void 0,
+  sr:c.screenSize?(a.screen||{}).width+"x"+(a.screen||{}).height:void 0,vp:c.screenSize&&
+  a.visualViewport?(a.visualViewport||{}).width+"x"+(a.visualViewport||{}).height:void 0,
+  ec:s||void 0,ea:t||void 0,el:u||void 0,ev:v||void 0,exd:w||void 0,exf:"undefined"!=typeof x&&
+  !1==!!x?0:void 0});if(f.sendBeacon)f.sendBeacon(z,A);else{var y=new XMLHttpRequest;
+  y.open("POST",z,!0),y.send(A)}};d.pushState=function(r){return"function"==typeof d.onpushstate&&
+  d.onpushstate({state:r}),setTimeout(n,c.delay||10),i.apply(d,arguments)},n(),
+  a.ma={trackEvent:function o(r,s,t,u){return n("event",r,s,t,u)},
+  trackException:function q(r,s){return n("exception",null,null,null,null,r,s)}}})
+  (window,"UA-152078779-2",{anonymizeIp:true,colorDepth:true,characterSet:true,screenSize:true,language:true});
+</script>
+
 <link rel="stylesheet" href="themes/tom.im/reset.css">
 <link rel="stylesheet" href="themes/tom.im/fonts.css">
 <link rel="stylesheet" href="themes/tom.im/layout.css">
@@ -41,11 +63,14 @@ drop to the Terminal and run this command:</p>
 <pre style="color:#e5e5e5;background-color:#000">curl https://bootstrap.pypa.io/get-pip.py -o ~/Downloads/get-pip.py
 </pre><p>Curl is technically a web browser. The command above gets a copy of the Python source for Pip
 and copies it into your MacOS Downloads directory.</p>
-<h2>Change to the Downloads directory</h2>
-<p>Change to the Downloads directory:</p>
+<ul>
+<li>Change to the Downloads directory:</li>
+</ul>
 <pre style="color:#e5e5e5;background-color:#000"><span style="color:#fff;font-weight:bold">cd</span> ~/Downloads
 </pre><h2>Install Pip using Python</h2>
-<p>You need to run Python on the <code>get-pip.py</code> program to install Pip:</p>
+<ul>
+<li>Run Python on the <code>get-pip.py</code> program to install Pip:</li>
+</ul>
 <pre style="color:#e5e5e5;background-color:#000">python ~/Downloads/get-pip.py --user
 </pre><p>Pip warns darkly that Python 2.7 has a limited lifespan. You'll see
 something like this:</p>

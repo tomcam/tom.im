@@ -27,9 +27,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o ~/Downloads/get-pip.py
 Curl is technically a web browser. The command above gets a copy of the Python source for Pip
 and copies it into your MacOS Downloads directory.
 
-## Change to the Downloads directory
-
-Change to the Downloads directory:
+* Change to the Downloads directory:
 
 ```bash
 cd ~/Downloads
@@ -37,7 +35,7 @@ cd ~/Downloads
 
 ## Install Pip using Python
 
-You need to run Python on the `get-pip.py` program to install Pip:
+* Run Python on the `get-pip.py` program to install Pip:
 
 ```bash
 python ~/Downloads/get-pip.py --user
