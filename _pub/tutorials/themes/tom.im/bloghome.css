@@ -91,10 +91,10 @@ article > pre, article > p, article > ul, article > ol, article > li, article > 
 		}
 article > p > strong {font-family:var(--informal);font-weight:700;}
 /* Override font rule for code */
-article > code, article > pre, article > pre > code {
-    padding-left:1em;
+article > p > code, article > code, article > pre, article > pre > code {
+    padding-left:.5em;
 		font-family:var(--code);
-		font-size:.9em;
+		font-size:.8em;
 		max-width:var(--max-article-width);
 		overflow:auto;
 		}
