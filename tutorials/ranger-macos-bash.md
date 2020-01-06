@@ -103,3 +103,5 @@ And now you can run it from the command line anywhere on your system:
 ranger
 ```
 
+[Home](/)
+
