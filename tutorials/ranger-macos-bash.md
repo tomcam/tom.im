@@ -8,9 +8,12 @@ to get that job done.
 
 * Use Python to install the Pip package manager. 
 Obviously, skip this step if you already have Pip installed.
+* Add Python and Pip to the path
+* Use Pip to install Ranger
+* Sit back and have your socks blasted right off your feet by Ranger's speed
 
 I assume you have a recent version of MacOS, which has an acceptable version of Python 
-on it.
+on it, though you'll get grumblings that's not the case.
 
 ## Installing Pip
 
@@ -24,7 +27,8 @@ drop to the Terminal and run this command:
 curl https://bootstrap.pypa.io/get-pip.py -o ~/Downloads/get-pip.py
 ```
 
-Curl is technically a web browser. The command above gets a copy of the Python source for Pip
+Curl is technically a web browser, but instead of rendering the HTML graphically 
+it makes a copy of the web page as a file. The command above gets a copy of the Python source for Pip
 and copies it into your MacOS Downloads directory.
 
 * Change to the Downloads directory:
