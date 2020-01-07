@@ -10,7 +10,7 @@ to get that job done.
 Obviously, skip this step if you already have Pip installed.
 * Add Python and Pip to the path
 * Use Pip to install Ranger
-* Sit back and have your socks blasted right off your feet by Ranger's speed
+* Finally, sit back and have your socks blasted right off your feet by Ranger's speed
 
 I assume you have a recent version of MacOS, which has an acceptable version of Python 
 on it, though you'll get grumblings that's not the case.
