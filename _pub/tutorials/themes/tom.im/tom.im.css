@@ -95,9 +95,11 @@ article > p > strong {font-family:var(--informal);font-weight:700;}
 article > p > code, article > code, article > pre, article > pre > code {
     padding-left:1em;
 		font-family:var(--code);
-		font-size:.8em;
+		font-size:1em;
 		max-width:var(--max-article-width);
 		overflow:auto;
+    margin-bottom:1em;
+    line-height:1.5em;
 		}
 article > hr {margin-right:var(--right-gap);}
 article > p > a,

@@ -9,8 +9,9 @@ Publish = "_pub"
 ThemeDir = "/Users/tom/Library/Preferences/.d2/themes"
 Ganalytics = "UA-152078779-2"
 
-[company]
+[Company]
 CompanyName = "tom.im"
+Name = "yo mama"
 
 [author]
 FullName = "Tom Campbell"

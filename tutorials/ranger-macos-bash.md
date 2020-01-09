@@ -1,5 +1,7 @@
 # Installing the Ranger file manager on MacOS under Bash
 
+![Picture of the Ranger file manager](ranger-720x469.gif)
+
 An insanely fast file manager/viewer with Vim key bindings? Sign me up for [Ranger](https://github.com/ranger/ranger)! 
 Problem is, I'm not used to installing these character-mode thingies from source on MacOS.  Here are my notes on how 
 to get that job done. 
@@ -48,7 +50,7 @@ python ~/Downloads/get-pip.py --user
 Pip warns darkly that Python 2.7 has a limited lifespan. You'll see
 something like this:
 
-```
+```text
 DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
 Collecting pip
   Downloading https://files.pythonhosted.org/packages/00/b6/9cfa56b4081ad13874b0c6f96af8ce16cfbc1cb06bedf8e9164ce5551ec1/pip-19.3.1-py2.py3-none-any.whl (1.4MB)
