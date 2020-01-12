@@ -1,13 +1,7 @@
+
 # Free Image Sites, Early 2020 edition
 
 #### By **Tom Campbell**, January 11, 2019
-
-{{ .Site.Company.Name }}
-{{ .Site.Author.FullName }}
-{{ .FrontMatter.Theme }}
-
-
-
 
 You need some great clip art but have a budget of $0. You may even be working
 for  a commercial organization. Where do you go? Here's a list
@@ -73,7 +67,7 @@ images default to .EPS format, however.
 
 ## Free cartoons for commercial use
 
-* [Open Doodles](https://www.opendoodles.com) wins the coveted "funkiest free image site" award 
+[Open Doodles](https://www.opendoodles.com) wins the coveted "funkiest free image site" award 
 in this roundup with its very specific, literally cartoonish sensibility. It's also one of
 the most flexible, because their [Generator](https://generator.opendoodles.com) lets you
 design a color scheme for the images.
@@ -82,7 +76,7 @@ design a color scheme for the images.
 
 #### Custom designed using the Open Doodles Generator **by Tom Campbell**
 
-* [Comicgen](https://gramener.com/comicgen/) from [Gramener](https://gramener.com/) is a 
+[Comicgen](https://gramener.com/comicgen/) from [Gramener](https://gramener.com/) is a 
 close competitor to [Open Doodles](https://www.opendoodles.com)
 in the funkiness sweepstakes.
 
@@ -112,12 +106,12 @@ image itself and whenever possibler the photographer's page on the free image si
 
 When *can't* you use these images? 
 
-**Collections** Most, though not all, only have problem with your using the image
+**Collections:** Most, though not all, only have problem with your using the image
 in the case where you are competiting with the sites themselves. 
 In other words, don't stockpile copies of all their images and try to start a competiting site.
 The license terms on the images normally forbid such use.
 
-**Reselling** You probably aren't allowed to use these images on things you resell in bulk,
+**Reselling:** You probably aren't allowed to use these images on things you resell in bulk,
 for example, T-shirts or coffee mugs. Check the license terms on each site to be sure.
 For example, anything using [CC0](https://creativecommons.org/publicdomain/zero/1.0/) 
 licensing is without any restriction.
