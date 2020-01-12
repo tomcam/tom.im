@@ -87,7 +87,6 @@ article > pre, article > p, article > ul, article > ol, article > li, article > 
 		font-size:1.5rem;
 		line-height:2.25rem;
 		margin-bottom:2em;
-		max-width:var(--max-article-width)
 		}
 article > p > strong {font-family:var(--informal);font-weight:700;}
 /* Override font rule for code */
@@ -95,7 +94,6 @@ article > p > code, article > code, article > pre, article > pre > code {
     padding-left:.5em;
 		font-family:var(--code);
 		font-size:.8em;
-		max-width:var(--max-article-width);
 		overflow:auto;
 		}
 article > hr {margin-right:var(--right-gap);}
