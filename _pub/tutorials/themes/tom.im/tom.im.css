@@ -91,7 +91,7 @@ article > h4 >  a:hover,
 article > h4 >  a:active
 	{text-decoration:underline;color:var(--trim-bg);background-color:var(--trim-fg);}
 
-article > img, article > p > img {width:100%;}
+article > img, article > p > img {width:100%;box-shadow:rgb(128,128,128) 1px 1px 3px 0px;}
 article > p, 
   article > ul, 
   article > ol, 
@@ -102,7 +102,7 @@ article > p,
 		font-family:var(--formal);
 		font-size:1.5rem;
 		line-height:2.25rem;
-		margin-top:2em;
+		margin-top:1em;
     margin-bottom:0;
     max-width:var(--max-article-width);
 }
@@ -112,7 +112,7 @@ article > p > code, article > code, article > pre, article > pre > code {
 		font-family:var(--code);
 		font-size:1em;
 		overflow:auto;
-    margin-top:1em;
+    margin-top:1rem;
     margin-bottom:0;
     line-height:1.5em;
     max-width:var(--max-article-width);
