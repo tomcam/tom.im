@@ -175,7 +175,17 @@ footer > table > tbody > tr > td > a:active
 /* RESPONSIVE SIZING */
 @media (max-width: 1024px) {
 header,nav,article {margin-left:0;margin-right:0;padding-left:1rem;padding-right:0}
-img,article{width:100%;}
+img{width:100%;}
+article,
+  article > p, 
+  article > ul, 
+  article > ol, 
+  article > li, 
+  article > dd, 
+  article > dl,
+  article > pre,
+  article > hr {
+  width:100%;max-width:100%;}
 aside {display:none}
 footer {display:none}
 }
