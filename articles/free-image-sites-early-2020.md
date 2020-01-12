@@ -48,6 +48,8 @@ learning to label them. [Their license](https://creativecommons.org/publicdomain
 is CC0, which means you can use the images with no restriction 
 (but they aren't model released).
 
+![Screen shot of Taken Photos home page](screenshot-of-taken-photos-1280x720.jpg)
+
 #### Taken is newer in the space and also has fantastic licensing terms
 
 [Unsplash](https://unsplash.com) is another big player and they say their subjects have
