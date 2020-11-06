@@ -1,3 +1,6 @@
+===
+pagetype="bloghome"
+===
 
 # Free Image Sites, Early 2020 edition
 
@@ -10,7 +13,7 @@ a few exceptions, discussed below.
 
 How free are they? Usually the only thing they ask is a proper photo
 credit and that you not use their images to go into competition with them.
-Now that images licensed as public domain or CC0 don't even 
+Images licensed as public domain or CC0 don't even 
 fall under those modest restrictions, and can be used for any purpose
 at all.
 

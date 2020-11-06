@@ -1,0 +1,66 @@
+CTYPE html>
+<!--
+  file:///Users/tom/code/mb/foobar/./loadjson.html
+-->
+<html lang=en>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Load JSON file from Javascript</title>
+</head>
+<body>
+
+<script>
+
+
+// Gets called when the HTML document has finally
+// been loaded. Function doesn't need to be named go().
+function go() {
+  console.log('go')
+  loadFile('testfile.json','demo')
+}
+
+// Read in the file specified by the path filename,
+// into the div whose ID is specified in divID.
+// Example:
+//   loadFile('testfile.json','demo')
+function loadFile(filename, divID){
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = function() {
+    console.log('readyState: ' + 
+      this.readyState + 
+      '. status: ' + 
+       this.status);
+    if (this.readyState == 4 && this.status == 200) {
+      // Copy contents of file into the specified div
+      document.getElementById(divID).innerHTML = this.responseText;
+      alert(this.responseText)
+    }
+  }
+  req.open("GET", filename, true);
+  req.send(null);
+}
+
+
+// Ensure document's loaded before running Javascript
+if (
+    document.readyState === "complete" ||
+    (document.readyState !== "loading" && !document.documentElement.doScroll)
+) {
+  go()
+} else {
+  // When the HTML file is completely read int,
+  // call this function. Can be called anything;
+  // here it's just called go()
+  document.addEventListener("DOMContentLoaded", go);
+}
+</script>
+
+</header>
+<h1>Read a JSON file with Javascript</h1>
+<!-- This div is filled with the file contents on startup -->
+<div id="demo"></div>
+</body>
+</html>
+
+

@@ -81,17 +81,8 @@ article > h1,article > h2 {font-weight:700;margin-bottom:6rem;}
 article > h2 {margin-top:4rem;}
 article > h2 {color:var(--trim-fg);margin-bottom:3rem;}
 article > h3 {color:var(--trim-fg);font-weight:bold;}
-article > h4 {font-weight:normal;font-size:1em;color:gray;margin-top:.25rem;margin-bottom:1rem; } /* Byline */
+article > h4 {font-weight:normal;font-size:1em;color:gray;margin-bottom:1em; } /* Byline */
 article > h4 > strong {font-weight:bold;color:black; } /* Byline */
-article > h4 > a,
-article > h4 > a:link,
-article > h4 > a:visited
-	{font-family:var(--informal);font-weight:bold;color:var(--trim-fg);text-decoration:underline;}
-article > h4 >  a:hover,
-article > h4 >  a:active
-	{text-decoration:underline;color:var(--trim-bg);background-color:var(--trim-fg);}
-
-article > img, article > p > img {width:100%;box-shadow:rgb(128,128,128) 1px 1px 3px 0px;}
 article > p, 
   article > ul, 
   article > ol, 
@@ -102,8 +93,7 @@ article > p,
 		font-family:var(--formal);
 		font-size:1.5rem;
 		line-height:2.25rem;
-		margin-top:1em;
-    margin-bottom:0;
+		margin-bottom:2em;
     max-width:var(--max-article-width);
 }
 article > p > strong {font-family:var(--informal);font-weight:700;}
@@ -112,8 +102,7 @@ article > p > code, article > code, article > pre, article > pre > code {
 		font-family:var(--code);
 		font-size:1em;
 		overflow:auto;
-    margin-top:1rem;
-    margin-bottom:0;
+    margin-bottom:1em;
     line-height:1.5em;
     max-width:var(--max-article-width);
 		}
@@ -172,21 +161,4 @@ footer > table > tbody > tr > td > a:hover,
 footer > table > tbody > tr > td > a:active
 	{color:var(--header-fg);text-decoration:underline;}
 
-/* RESPONSIVE SIZING */
-@media (max-width: 1024px) {
-header,nav,article {margin-left:0;margin-right:0;padding-left:1rem;padding-right:0}
-img{width:100%;}
-article,
-  article > p, 
-  article > ul, 
-  article > ol, 
-  article > li, 
-  article > dd, 
-  article > dl,
-  article > pre,
-  article > hr {
-  width:100%;max-width:100%;}
-aside {display:none}
-footer {display:none}
-}
 
