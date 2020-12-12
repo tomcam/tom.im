@@ -1,7 +1,3 @@
-===
-pagetype="bloghome"
-===
-
 # Free Image Sites, Early 2020 edition
 
 #### By **Tom Campbell**, January 11, 2019
