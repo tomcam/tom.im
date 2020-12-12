@@ -1,0 +1,45 @@
+:root 
+{
+
+  /* The following should add up to 100%:
+   * --article-width
+	 * --sidebar-width
+   * --left-margin
+   * --right-margin
+   */
+
+  /* Blank column to left of client area */
+  --left-margin:00%;
+
+  /* Blank column to left of right of area */
+  --right-margin:00%;
+
+  /* Width of main part of client area, the article */
+	--article-width:60%; 
+
+  /* Sidebar width */
+	--sidebar-width:20%;    
+
+  /* Usually you want the header and the footer to
+   * match. This makes them the same width.
+   */
+  --header-footer-width:100%;
+
+  /* Sort of specialized. You can use this to
+   * ensure that the header, nav, article, and footer
+   * all start text at the same position so
+   * they line up properly. Don't have to assign
+   * it to all of them.*/
+  --text-start: 2em;
+
+	/* Adjusts header height and keeps it vertically centered */
+	--header-height:8rem;
+
+	/* Size of the main text in the header. */
+	--branding-height:4rem;
+
+	/* Adjusts navbar height and keeps it vertically centered */
+	--nav-height:5rem;
+
+}
+

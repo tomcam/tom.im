@@ -1,0 +1,22 @@
+![Clip art of homely man](tomcampbell-chagrinned-pixel-256x256.png)
+#### ABOUT ME
+
+### Tom Campbell
+
+##### CEO, investor, creator of [Metabuzz](https://metabuzz.com). [github.com/metabuzz](https://github.com/metabuzz) for issues (love it when you post ideas there) and occasionally to be found at [@trymetabuzz](https://twitter.com/trymetabuzz) on Twitter or Facebook at [GetMetabuzz](https://www.facebook.com/getmetabuzz) on Facebook.
+
+---
+
+![Metabuzz logo](map32x32-red.svg)
+
+
+{{ if .Site.Social.Twitter }}[![Twitter logo](twitter-blue-30x30.svg)]({{ .Site.Social.Twitter }}){{ end }} 
+
+{{ if .Site.Social.Facebook }}[![Facebook logo](facebook-blue-30x30.svg)]({{ .Site.Social.Facebook }}){{ end }}
+
+{{ if .Site.Social.LinkedIn }}[![LinkedIn logo](linkedin-blue-30x30.svg)]({{ .Site.Social.LinkedIn }}){{ end }} 
+
+{{ if .Site.Social.GitHub }}[![GitHub logo](github-white-30x30.svg)]({{ .Site.Social.GitHub }}){{ end }} 
+
+
+

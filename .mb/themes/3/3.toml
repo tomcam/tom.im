@@ -1,0 +1,26 @@
+Branding = "_"
+Description = "The ur-theme, complete but stripped-down starting point"
+RootStylesheets = ["reset.css", "fonts.css", "layout.css"]
+#Stylesheets = ["sizes.css", "theme-light.css", "3.css"]
+Stylesheets = ["sizes.css", "theme-light.css", "writ.css","3.css"]
+PathName = ""
+
+[Nav]
+  HTML = ""
+  File = "nav.md"
+
+[Header]
+  HTML = ""
+  File = "header.md"
+
+[Article]
+  HTML = ""
+  File = ""
+
+[Footer]
+  HTML = ""
+  File = "footer.md"
+
+[Sidebar]
+  HTML = ""
+  File = "sidebar.md"
