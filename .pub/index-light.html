@@ -36,8 +36,6 @@
 <article id="article"><h4 id="theme-textual-see-this-page-in-dark-modeindexhtml-and-another-article-using-the-pillar-themearticlescss-validator-lighthtml">Theme: textual. See this page in <a href="index.html">dark mode</a> and another article using the <a href="articles/css-validator-light.html">pillar theme</a>.</h4>
 <h2 id="heading"></h2>
 <h1 id="metabuzz-markdown-quick-reference">Metabuzz Markdown quick reference</h1>
-<p>Metabuzz was designed from the ground up to make creating information-dense websites as fast as possible. If you only know Markdown, you can create a full website starting right now. You don't need to know CSS or HTML. You don't need to understand how to edit front matter, though knowing these things helps.</p>
-<p>If you don't even know Markdown, you're still fine. This page is a quick reference showing all Markdown features and the website has a complete <a href="https://metabuzz.com/website/docs/tutorial.html">tutorial</a>.</p>
 <p><strong>Table of contents</strong></p>
 <ul>
 <li><a href="#common-text-formatting">Common text formatting</a></li>
@@ -163,53 +161,24 @@ fmt.Println(&quot;This is a code block&quot;)
 <h4 id="you-type-6">You type:</h4>
 <pre><code>### Ordered lists
 
-1. Numbered item 
-   1. Numbered subitem 1 after 3 spaces
-   2. Numbered subitem 2 after 3 spaces
-1. Back to level 1 ordered aka numbered list
-   1. Subitem 1 after 3 spaces
-   1. Subitem 2 after 3 spaces
-   1. Subitem 3 after 3 spaces
-      1. Sub-subitem 1 is 3 levels deep
-      1. Sub-subitem 2 is 3 levels deep
-         1. Sub-sub-subitem 1 is 4 levels deep
-         1. That's more than recommended for clarity
-
+1. Ordered lists have numeric sequences
+1. Even though you write `1` in Markdown,
+1. The numbers display properly on output
 </code></pre>
 <h4 id="it-shows-as-6">It shows as:</h4>
 <h3 id="ordered-lists">Ordered lists</h3>
 <ol>
-<li>Numbered item
-<ol>
-<li>Numbered subitem 1 after 3 spaces</li>
-<li>Numbered subitem 2 after 3 spaces</li>
+<li>Ordered lists have numeric sequences</li>
+<li>Even though you write <code>1</code> in Markdown,</li>
+<li>The numbers display properly on output</li>
 </ol>
-</li>
-<li>Back to level 1 ordered aka numbered list
-<ol>
-<li>Subitem 1 after 3 spaces</li>
-<li>Subitem 2 after 3 spaces</li>
-<li>Subitem 3 after 3 spaces
-<ol>
-<li>Sub-subitem 1 is 3 levels deep</li>
-<li>Sub-subitem 2 is 3 levels deep
-<ol>
-<li>Sub-sub-subitem 1 is 4 levels deep</li>
-<li>That's more than recommended for clarity</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<p><a name="unordered-lists"></a></p>
+<p><a name="unordered-lists"><a/></p>
 <h3 id="unordered-or-bullet-lists">Unordered, or bullet lists</h3>
 <h4 id="you-type-7">You type:</h4>
 <pre><code>Reasons people hate bullet lists
 
-* They were traumatized by bad PowerPoint
-* Some people actually like bullet lists
+* They were traumatized bybad PowerPoint
+* Some peple actually like bullet lists
   + You can indent bullet lists
     - Just use tab, then one of the characters `*`, `+`, `-`
   + The `+` isn't required. It's just for clarity
@@ -220,8 +189,8 @@ fmt.Println(&quot;This is a code block&quot;)
 <h4 id="it-shows-as-7">It shows as:</h4>
 <p>Reasons people hate bullet lists</p>
 <ul>
-<li>They were traumatized by bad PowerPoint</li>
-<li>Some people actually like bullet lists
+<li>They were traumatized bybad PowerPoint</li>
+<li>Some peple actually like bullet lists
 <ul>
 <li>You can indent bullet lists
 <ul>
@@ -308,7 +277,8 @@ Headers are always centered.</p>
 </table>
 <h2 id="block-quote">Block quote</h2>
 <h4 id="you-type-10">You type:</h4>
-<pre><code>&gt; Hypocrisy waits silently for us all. 
+<pre><code>&gt;Hypocrisy waits silently for us all. 
+
 </code></pre>
 <h4 id="it-shows-as-10">It shows as:</h4>
 <blockquote>

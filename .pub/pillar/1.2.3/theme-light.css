@@ -71,7 +71,6 @@
     --sidebar-bg: white;
     /* Link colors specific to sidebar */
     --a-sidebar: var(--a); 
-    --a-sidebar-link:  var(--a);
     --a-sidebar-visited:  var(--a);
     --a-sidebar-hover: var(--a); 
     --a-sidebar-active:  var(--a);

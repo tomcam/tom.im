@@ -6,10 +6,10 @@
    * ******************************/
 
   /* Adjusts header height and keeps it vertically centered */
-  --header-height:3rem;
+  --header-height:4rem;
 
   /* Size of the main text in the header. */
-  --branding-height:3rem;
+  --branding-height:3.75rem;
 
   /* Same as header {margin-top:}  */
   --header-margin-top:0;
@@ -93,7 +93,7 @@
   --h4-margin-bottom:0em;
 
   /* Same as article > h5 {font-size}, h5 {padding}, h5 {margin} */
-  --h5-font-size:1.5rem;
+  --h5-font-size:.75rem;
   --h5-padding-top:0em;
   --h5-padding-bottom:0em;
   --h5-margin-top:0em;

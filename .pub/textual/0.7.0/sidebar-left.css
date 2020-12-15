@@ -12,17 +12,18 @@ article{margin-right:var(--right-margin);margin-left:0;}
 /* With sidebar to left no padding is needed  */
 article{padding-left:0;}
 
-/* Not loving this solution. */
 article { padding-right:var(--sidebar-width);}
 
 aside {padding-left:1.5em;padding-right:1.5em;}
 aside > p:first-child > img {border-radius:50%;padding:.5em;width:40%;}
-aside > p {font-weight:normal;font-size:.7rem;padding:2em;text-align:center;}
+aside > p {font-weight:bold;font-size:.7rem;padding:2em;text-align:center;}
 aside > p > img, aside > p > a > img {width:40%;margin:0;width:20%;padding-left:5%;padding-right:5%;}
 aside > hr {margin:2em;height:1px;color:darkgray;margin-left:25%;margin-right:25%;}
-aside > h3, aside > h4 {text-align:center;color:var(--fg);background-color:var(--bg);font-family:var(--informal);font-size:.75rem;font-weight:normal;margin-bottom:0;}
+aside > h2 {font-size:2em;padding-bottom:.5em;}
+
 aside > h3 {font-weight:bold;padding-bottom:1em;}
-aside > h5 {padding-left:4.5em;padding-right:4em;line-height:1.4em;}
+aside > h4 {padding:.5em;}
+aside > h5 {text-align:right;line-height:1.4em;}
 aside a {color:var(--a-sidebar);}
 aside a:hover, aside a:active {text-decoration:none;}
 /*
@@ -30,34 +31,36 @@ aside a:hover, aside a:active {text-decoration:none;}
  * Sidebar unordered list shows as boxes, without
  * indentation--it's for table of contents
  * --------------------------------------------------
+ */
 aside > ul {
-  background-color:whitesmoke;
-  margin-right:1em;
-  margin-left:var(--left-margin);
+  margin-bottom:2em;
   border-collapse:collapse;
 }
 
 
 aside > ul li {
+  padding: .5em .5em .5em .5em;
   list-style-type:none;
-  border-top: 1px solid gray;
-  box-shadow: rgb(128,128,128) 1px 1px 1px 0px;
+  margin-bottom:1em;
+  border-top:1px solid lightgray;
+  iborder-bottom:1px solid lightgray;
+  iiborder-left:.25rem solid #FF0000;
+  border-left:.25rem solid lightgray;
 }
 
 aside > ul li a {
-  padding-left:.5em;padding-right:.5em;
+  border-bottom:1px dotted var(--a); 
   text-decoration:none;
-  line-height:1em;
 }
 
 aside > ul li a:active, aside > ul li a:hover {
-  font-weight:bold;
+  background-color:var(--fg);
+  color:var(--bg);
 }
 
 aside > ul > li > a {
   font-weight:bold;
 }
- */
 
 
 

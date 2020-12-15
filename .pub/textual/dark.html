@@ -4,19 +4,19 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
-<title>A Command-line CSS validator for "modern" CSS</title>
+<title>metabuzz: Title needed here, squib</title>
 
 <meta name="description" content=".">
 <meta name="Generator" content="Metabuzz 0.7.0">
 
 
-<link rel="stylesheet" href="/pillar/1.2.3/reset.css">
-<link rel="stylesheet" href="/pillar/1.2.3/fonts.css">
-<link rel="stylesheet" href="/pillar/1.2.3/bind.css">
-<link rel="stylesheet" href="/pillar/1.2.3/sizes.css">
-<link rel="stylesheet" href="/pillar/1.2.3/theme-light.css">
-<link rel="stylesheet" href="/pillar/1.2.3/pillar.css">
-<link rel="stylesheet" href="/pillar/1.2.3/responsive.css">
+<link rel="stylesheet" href="/textual/0.7.0/reset.css">
+<link rel="stylesheet" href="/textual/0.7.0/fonts.css">
+<link rel="stylesheet" href="/textual/0.7.0/bind.css">
+<link rel="stylesheet" href="/textual/0.7.0/sizes.css">
+<link rel="stylesheet" href="/textual/0.7.0/theme-dark.css">
+<link rel="stylesheet" href="/textual/0.7.0/textual.css">
+<link rel="stylesheet" href="/textual/0.7.0/responsive.css">
 
 </head>
 <body>
@@ -29,67 +29,39 @@
 </ul>
 </header>
 
-<nav><p><a href="/">Learn More</a> <a href="/">Download the App</a> <a href="/">Contact</a>  <a href="/">Media</a> <a href="https://twitter.com/trymetabuzz"><img src="twitter-blue-30x30.svg" alt="Twitter logo" /></a><a href="https://www.facebook.com/getmetabuzz"><img src="facebook-blueish-30x30.svg" alt="Facebook logo" /></a></p>
+<nav><p><a href="/">Contact</a>  <a href="/">About</a><a href="https://github.com/metabuzz"><img src="foo.svg" alt="GitHub logo" /></a><a href="https://twitter.com/trymetabuzz"><img src="twitter-blue-30x30.svg" alt="Twitter logo" /></a><a href="https://www.facebook.com/getmetabuzz"><img src="facebook-blueish-30x30.svg" alt="Facebook logo" /></a></p>
 </nav>
 
-<article id="article"><h4 id="theme-pillar-see-this-page-in-dark-modecss-validatorhtml-or-go-backindex-lighthtml">Theme: pillar. See this page in <a href="css-validator.html">dark mode</a> or <a href="../index-light.html">go back</a></h4>
-<h2 id="heading"></h2>
-<h1 id="a-command-line-css-validator-for-modern-css">A Command-line CSS validator for &quot;modern&quot; CSS</h1>
-<p>I am working on a project with hundreds of CSS files to maintain.
-Using the web-based W3C <a href="https://jigsaw.w3.org/css-validator/">CSS Validation Service</a> stopped being an option when I started to use CSS custom properties, which look like this:</p>
-<pre><code>:root
-{
-  /* Default foreground color */
-  --fg:white;
-}
-</code></pre>
-<p>They're applied using <code>var</code> like this:</p>
-<pre><code>article {color:var(--fg);}
-</code></pre>
-<p>While custom properties have been in CSS for well-nigh a decade, the interactive W3C validator online doesn't support them. Further, running checks at the command line is faster and more convenient for me.</p>
-<h2 id="nu-html-checker-to-the-rescue-almost">Nu HTML checker to the rescue, almost</h2>
-<p>To make a long story short, there appear to be no easily available CSS checkers that operate from the command line and also support custom properties. But the <a href="https://validator.github.io/validator/">Nu HTML checker</a> does work from the command line, and it supports custom properties even though its web-based counterpart doesn't.</p>
-<h3 id="downloading-a-compiled-version">Downloading a compiled version</h3>
-<p>You don't have to compile from source. You can get a compiled version of the Nu HTML checker from the <a href="https://github.com/validator/validator/releases">validator releases</a> page.</p>
-<p>As a Mac user specifically, I used the version at <a href="https://github.com/validator/validator/releases/tag/20.6.30">https://github.com/validator/validator/releases/tag/20.6.30</a> but of course versions change. Your mileage may vary.</p>
-<p>Nu HTML checker did the trick pretty well except for line numbers. It expects an HTML file, which means the CSS errors are displaced. Plus I just wanted to check pure CSS files, not an HTML file. The solution was obviously something along the lines of &quot;create a temporary HTML file, insert the CSS, and do the validation.&quot;</p>
-<h2 id="creating-a-one-line-html-file">Creating a one-line HTML file</h2>
-<p>In order to get the error messages to yield correct line numbers, the answer was to create the temp HTML in a single line, insert the CSS, and run the validation. I created a script that works for Bash or zsh:</p>
-<h5 id="file-vsh">file: v.sh</h5>
-<pre><code>OUTFILE=&quot;VNU_CHECK.HTML&quot;
-# Read the file named on the command line, which is $1, 
-# into the variable $INFILE.
-INFILE=$(&lt;$1)
-# Create the variable $CONTENTS from this HTML, plus
-# insert the contents of $1 inside a style tag. 
-# Keep it all on the same line 
-# so error messages are accurate
-read -r -d '' CONTENTS &lt;&lt; EOM
-&lt;!DOCTYPE html&gt;&lt;html lang=&quot;&quot;&gt;&lt;head&gt;&lt;title&gt;$1&lt;/title&gt;&lt;style&gt;$INFILE&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
-EOM
-## Copy all of this to the output file
-echo &quot;$CONTENTS&quot; &gt; $OUTFILE
-echo $1:
-vnu $OUTFILE
-</code></pre>
-<ul>
-<li>You save that as <code>v.sh</code> or whatever and make it executable:</li>
-</ul>
-<pre><code>$ chmod +x v.sh
-</code></pre>
-<ul>
-<li>Then put it on the path if you wish; on my system I placed it in <code>/usr/local/bin</code>:</li>
-</ul>
-<pre><code>$ mv v.sh /usr/local/bin
-</code></pre>
-<p>So if your file is named <code>layout.css</code> you'd invoke:</p>
-<pre><code>$ v.sh layout.css
-</code></pre>
-<p>The script generates a file with the name hardcoded to <code>VNU_CHECK.HTML</code> because that name is unlikely to collide with any other filename, so you can put it in <code>.gitignore</code> or otherwise delete it at will. The inline HTML contains the CSS file so error messages give you the right line number.</p>
-<p>The Nu HMTL Checker error messages are that rarest kind, because they are detailed and relevant. I've run it hundreds of times and so far it hasn't been wrong or misleading. Mad props to whoever wrote it.</p>
-<pre><code>ERROR:html5validator.validator:[u'&quot;file:/Users/tom/code/tom/VNU_CHECK.HTML&quot;:26.32-26.32: error: CSS: &quot;margin-block-start&quot;: Property &quot;margin-block-start&quot; doesn\'t exist.'
-</code></pre>
-<p>When you're finished delete <code>VNU_CHECK.HTML</code>.</p>
+<article id="article"><h4 id="trends--music">TRENDS &gt; MUSIC</h4>
+<p><img src="img-sample-portable-phono-640x417.jpg" alt="Photo of old-fashioned record player" /></p>
+<h5 id="image-credit-photo-by-suzy-hazelwood-from-pexelshttpswwwpexelscomphotoblack-speaker-beside-vinyl-sleeve-3077740">Image credit: <a href="https://www.pexels.com/photo/black-speaker-beside-vinyl-sleeve-3077740/">Photo by Suzy Hazelwood from Pexels</a></h5>
+<h1 id="retro-is-really-back-baby">Retro is Really Back, Baby</h1>
+<h4 id="by-tom-campbell--staff-reporter--dec-14-2020">By Tom Campbell <em>| Staff reporter |</em> <strong>Dec 14, 2020</strong></h4>
+<p><em>(Dateline: Hollywoodland, CA)</em> Is retro really back? &quot;With a lot of producers, it's all about analog,&quot; says Seattle producer <a href="https://soundcloud.com/moxchehalis/tracks">Mox Chehalis</a>. &quot;Not exclusively but it's one of the paints in my palette, for reals. I have a lot of vintage equipment because it just gives a feel you can't get any other way. God knows I've tried.&quot;</p>
+<blockquote>
+<p>Mox: It's all about analog</p>
+</blockquote>
+<p>Others agree.</p>
+<p>Textual is elastic---its header and footer stretch with the web page width. When you create a Markdown source file and don't specify a <a href="../../docs/themes.html#frontmatter">theme</a>, Textual is the one that's chosen. Likewise, when you create a new theme or pagetype, that new theme will be based on Textual if you don't choose otherwise.</p>
+<h3 id="click-to-try-different-versions-of-this-theme--live-">Click to try different versions of this theme <em>live</em></h3>
+<table>
+<thead>
+<tr>
+<th align="left">No sidebar</th>
+<th align="left">Sidebar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="light.html">Light theme</a></td>
+<td align="left"><a href="light-sidebar-left.html">Left</a> <a href="light-sidebar-right.html">Right</a></td>
+</tr>
+<tr>
+<td align="left"><a href="dark.html">Dark theme</a></td>
+<td align="left"><a href="dark-sidebar-left.html">Left</a>  <a href="dark-sidebar-right.html">Right</a></td>
+</tr>
+</tbody>
+</table>
 <h1 id="metabuzz-markdown-quick-reference">Metabuzz Markdown quick reference</h1>
 <p><strong>Table of contents</strong></p>
 <ul>
@@ -118,7 +90,7 @@ vnu $OUTFILE
 <li><a href="#block-quote">Block quote</a></li>
 </ul>
 <h2 id="markdown-syntax">Markdown syntax</h2>
-<p>Here's how markdown appears in the <strong>pillar</strong> theme:</p>
+<p>Here's how markdown appears in the <strong>textual</strong> theme:</p>
 <h2 id="common-text-formatting">Common text formatting</h2>
 <h4 id="you-type">You type:</h4>
 <pre><code>Normal body text, **strong**, ~~strikethrough~~, and with *emphasis*.

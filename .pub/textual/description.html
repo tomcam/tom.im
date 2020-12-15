@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+<title>metabuzz: Title needed here, squib</title>
+
+<meta name="description" content=".">
+<meta name="Generator" content="Metabuzz 0.7.0">
+
+
+<link rel="stylesheet" href="/wide/reset.css">
+<link rel="stylesheet" href="/wide/fonts.css">
+<link rel="stylesheet" href="/wide/layout.css">
+<link rel="stylesheet" href="/wide/sizes.css">
+<link rel="stylesheet" href="/wide/theme-light.css">
+<link rel="stylesheet" href="/wide/wide.css">
+<link rel="stylesheet" href="/wide/responsive.css">
+<link rel="stylesheet" href="/wide/responsive.css">
+
+</head>
+<body>
+
+<header><ul>
+<li><a href="/">Metabuzz</a></li>
+<li><a href="/">Events</a></li>
+<li><a href="/">Podcast</a></li>
+<li><a href="/">Subscribe</a></li>
+</ul>
+</header>
+
+<nav><p><a href="/">Learn More</a> <a href="/">Download the App</a> <a href="/">Contact</a>  <a href="/">Media</a> <a href="https://twitter.com/trymetabuzz"><img src="twitter-blue-30x30.svg" alt="Twitter logo" /></a><a href="https://www.facebook.com/getmetabuzz"><img src="facebook-blue-30x30.svg" alt="Facebook logo" /></a></p>
+</nav>
+
+<article id="article"><p>Textual is elastic---its header and footer stretch with the web page width. When you create a Markdown source file and don't specify a <a href="../../docs/themes.html#frontmatter">theme</a>, Textual is the one that's chosen. Likewise, when you create a new theme or pagetype, that new theme will be based on Textual if you don't choose otherwise.</p>
+</article>
+
+<footer><table>
+<thead>
+<tr>
+<th>SECTIONS</th>
+<th>CONNECTIONS</th>
+<th>About Us</th>
+<th align="left">Your rights</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/">Sitemap</a></td>
+<td><a href="/">Twitter</a></td>
+<td><a href="/">About</a></td>
+<td align="left"><a href="/">Privacy and cookies</a></td>
+</tr>
+<tr>
+<td><a href="/">Articles</a></td>
+<td><a href="/">Instagram</a></td>
+<td><a href="/">Credits</a></td>
+<td align="left"><a href="/">Terms of use </a></td>
+</tr>
+<tr>
+<td><a href="/">Tutorials</a></td>
+<td><a href="/">LinkedIn</a></td>
+<td><a href="/">Media</a></td>
+<td align="left"><a href="/">About our ads</a></td>
+</tr>
+<tr>
+<td><a href="/">Blog</a></td>
+<td><a href="/">YouTube</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td><a href="/">Opinion</a></td>
+<td><a href="/">Instagram</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td><a href="/">Sitemap</a></td>
+<td><a href="/">Twitter</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="/">LinkedIn</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="/">Podcast</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="/">RSS</a></td>
+<td></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</footer>
+<script>
+var scrollTimer = -1;
+function bodyScroll()
+{
+  if(scrollTimer != -1){
+    clearTimeout(scrollTimer);
+  }
+  scrollTimer = window.setTimeout(sidebarHeight, 100);
+}
+function sidebarHeight() {
+  s=document.getElementById('sidebar');
+  a=document.getElementById('article'); 
+  if (s != null && a != null) {
+    // If there's a sidebar,
+    ha=a.offsetHeight;
+    hs=s.offsetHeight;
+    // If the article is longer, make
+    // the sidebar as long as the article.
+    if (ha>hs) {
+      h=a.offsetHeight+'px';s.style.height=h;
+    }
+    // If the sidebar is longer than the
+    // article, make the article as long
+    // as the sidebar.
+    else{
+      h=s.offsetHeight+'px';a.style.height=h;
+    }
+  }
+} 
+document.onreadystatechange = function () {
+  if (document.readyState == "interactive") {
+    // Init or start code here
+    bodyScroll();
+  }
+} 
+window.onresize=sidebarHeight;
+/* ES5 works fine */
+document.getElementsByTagName('body')[0].onscroll=bodyScroll();
+</script>
+
+
+</body>
+</html>

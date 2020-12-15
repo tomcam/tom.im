@@ -50,7 +50,7 @@ article > h6{font-size:var(--h6-font-size);padding-top:var(--h6-padding-top);pad
 
 aside {color:var(--sidebar-fg);background-color:var(--sidebar-bg);} 
 aside {width:var(--sidebar-width);}                            
-aside > a, aside > p > a {color:var(--a-sidebar-link);}
+aside > a, aside > p > a {color:var(--a-sidebar);}
 aside > a:visited, aside > p > a:visited {color:var(--a-sidebar-visited);}
 aside > a:hover, aside > p > a:hover{color:var(--a-sidebar-hover);}
 aside > a:active, aside > p > a:active{color:var(--a-sidebar-active);}

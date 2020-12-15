@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+<title>{{ .FrontMatter.List.DemoTheme }} theme | Metabuzz</title>
+
+<meta name="description" content=".">
+<meta name="Generator" content="Metabuzz 0.7.0">
+
+
+<link rel="stylesheet" href="/debut/gallery/sizes.css">
+<link rel="stylesheet" href="/debut/gallery/layout.css">
+<link rel="stylesheet" href="/debut/gallery/gallery.css">
+<link rel="stylesheet" href="/debut/gallery/theme-light.css">
+<link rel="stylesheet" href="/debut/gallery/responsive.css">
+<link rel="stylesheet" href="/debut/gallery/responsive.css">
+
+</head>
+<body>
+
+<article id="article"><h1 id="textual-theme--metabuzz"><strong>textual</strong> theme <del>| Metabuzz</del></h1>
+<p><a href="dark.html"><img src="theme-1280x1024.png" alt="Screen shot of theme" /></a></p>
+<h2 id="heading"></h2>
+<h3 id="about-textual">About textual</h3>
+<p>Textual is elastic---its header and footer stretch with the web page width. When you create a Markdown source file and don't specify a <a href="../../docs/themes.html#frontmatter">theme</a>, Textual is the one that's chosen. Likewise, when you create a new theme or pagetype, that new theme will be based on Textual if you don't choose otherwise.</p>
+<h3 id="click-to-try-different-versions-of-this-theme--live-">Click to try different versions of this theme <em>live</em></h3>
+<table>
+<thead>
+<tr>
+<th align="left">No sidebar</th>
+<th align="left">Sidebar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="light.html">Light theme</a></td>
+<td align="left"><a href="light-sidebar-left.html">Left</a> <a href="light-sidebar-right.html">Right</a></td>
+</tr>
+<tr>
+<td align="left"><a href="dark.html">Dark theme</a></td>
+<td align="left"><a href="dark-sidebar-left.html">Left</a>  <a href="dark-sidebar-right.html">Right</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="creator">Creator</h3>
+<p><a href="https://metabuzz.com">Tom Campbell</a></p>
+<h3 id="license">License</h3>
+<p><a href="https://metabuzz.com">MIT</a></p>
+</article>
+
+<footer><h2 id="gallery-subdir-back-to-the-galleryindexhtml-documentationdocsindexhtml">Gallery subdir <a href="../../index.html">Back to the Gallery</a> <a href="../../docs/index.html">Documentation</a></h2>
+</footer>
+<script>
+var scrollTimer = -1;
+function bodyScroll()
+{
+  if(scrollTimer != -1){
+    clearTimeout(scrollTimer);
+  }
+  scrollTimer = window.setTimeout(sidebarHeight, 100);
+}
+function sidebarHeight() {
+  s=document.getElementById('sidebar');
+  a=document.getElementById('article'); 
+  if (s != null && a != null) {
+    // If there's a sidebar,
+    ha=a.offsetHeight;
+    hs=s.offsetHeight;
+    // If the article is longer, make
+    // the sidebar as long as the article.
+    if (ha>hs) {
+      h=a.offsetHeight+'px';s.style.height=h;
+    }
+    // If the sidebar is longer than the
+    // article, make the article as long
+    // as the sidebar.
+    else{
+      h=s.offsetHeight+'px';a.style.height=h;
+    }
+  }
+} 
+document.onreadystatechange = function () {
+  if (document.readyState == "interactive") {
+    // Init or start code here
+    bodyScroll();
+  }
+} 
+window.onresize=sidebarHeight;
+/* ES5 works fine */
+document.getElementsByTagName('body')[0].onscroll=bodyScroll();
+</script>
+
+
+</body>
+</html>
